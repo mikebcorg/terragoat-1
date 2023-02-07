@@ -26,6 +26,7 @@ resource azurerm_app_service "app-service1" {
   resource_group_name = azurerm_resource_group.example.name
   https_only          = false
   site_config {
+    ftps_state = "Disabled"
     min_tls_version = "1.1"
   }
   tags = {
